@@ -3,5 +3,8 @@
   "version": "1.0.0",
   "main": "index.js",
   "repository": "https://github.com/poomer123/chat-server.git",
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "socket.io": "^2.3.0"
+  }
 }
