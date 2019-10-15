@@ -1,0 +1,7 @@
+{
+  "name": "chat-server",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/poomer123/chat-server.git",
+  "license": "MIT"
+}
