@@ -7,7 +7,7 @@ io.on('connection', socket => {
     socket.on('emit', data => {
         console.log('receive data', data)
         count++
-        socket.emit('count', { count: count })
+        socket.broadcast.emit('count', { count: count })
     })
 })
 
