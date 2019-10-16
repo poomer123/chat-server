@@ -1,9 +1,13 @@
 const server = require('http').createServer()
 const io = require('socket.io')(server)
 
+let count = 0
+
 io.on('connection', socket => {
     socket.on('emit', data => {
         console.log('receive data', data)
+        count++
+        socket.emit('count', { count: count })
     })
 })
 
