@@ -2,8 +2,8 @@ const server = require('http').createServer()
 const io = require('socket.io')(server)
 
 io.on('connection', socket => {
-    socket.on('emit', () => {
-        console.log('receive data')
+    socket.on('emit', data => {
+        console.log('receive data', data)
     })
 })
 
