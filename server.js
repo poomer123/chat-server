@@ -4,14 +4,14 @@ const io = require('socket.io')(server)
 let count = 0
 
 io.on('connection', socket => {
-    socket.on('emit', data => {
-        console.log('receive data', data)
-        count++
-        socket.broadcast.emit('count', { count: count })
-    })
+	socket.on('emit', data => {
+		console.log('receive data', data)
+		count++
+		socket.broadcast.emit('count', { count: count })
+	})
 })
 
 server.listen(8080, err => {
-    if (err) throw err
-    console.log('server is listening to port 8080')
+	if (err) throw err
+	console.log('server is listening to port 8080')
 })
